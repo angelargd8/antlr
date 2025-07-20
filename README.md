@@ -21,7 +21,7 @@ java -jar antlr-4.7.2-complete.jar
 
 ### generar el lexer y parser:
 
-(nota: se genero el lexer y parser en el de java, por lo tanto es importante estar en la ruta en la que se tiene la gramatica)
+(nota: se genero el lexer y parser en el de java, por lo tanto es importante estar en la ruta en la que se tiene la gramatica para correr el siguiente comando)
 ```
 java -jar C:\WINDOWS\system32\antlr-4.7.2-complete.jar -Dlanguage=Python3 -visitor Gramatica.g4
 
