@@ -9,33 +9,53 @@ else:
 
 class GramaticaVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by GramaticaParser#inicio.
-    def visitInicio(self, ctx:GramaticaParser.InicioContext):
+    # Visit a parse tree produced by GramaticaParser#prog.
+    def visitProg(self, ctx:GramaticaParser.ProgContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#saludo.
-    def visitSaludo(self, ctx:GramaticaParser.SaludoContext):
+    # Visit a parse tree produced by GramaticaParser#printExpr.
+    def visitPrintExpr(self, ctx:GramaticaParser.PrintExprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#Numero.
-    def visitNumero(self, ctx:GramaticaParser.NumeroContext):
+    # Visit a parse tree produced by GramaticaParser#assign.
+    def visitAssign(self, ctx:GramaticaParser.AssignContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#Suma.
-    def visitSuma(self, ctx:GramaticaParser.SumaContext):
+    # Visit a parse tree produced by GramaticaParser#blank.
+    def visitBlank(self, ctx:GramaticaParser.BlankContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#Parentesis.
-    def visitParentesis(self, ctx:GramaticaParser.ParentesisContext):
+    # Visit a parse tree produced by GramaticaParser#parens.
+    def visitParens(self, ctx:GramaticaParser.ParensContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#Multiplicacion.
-    def visitMultiplicacion(self, ctx:GramaticaParser.MultiplicacionContext):
+    # Visit a parse tree produced by GramaticaParser#MulDiv.
+    def visitMulDiv(self, ctx:GramaticaParser.MulDivContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GramaticaParser#AddSub.
+    def visitAddSub(self, ctx:GramaticaParser.AddSubContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GramaticaParser#unaryMinus.
+    def visitUnaryMinus(self, ctx:GramaticaParser.UnaryMinusContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GramaticaParser#id.
+    def visitId(self, ctx:GramaticaParser.IdContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by GramaticaParser#int.
+    def visitInt(self, ctx:GramaticaParser.IntContext):
         return self.visitChildren(ctx)
 
 

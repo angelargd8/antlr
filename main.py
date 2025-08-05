@@ -9,8 +9,10 @@ from GramaticaParser import GramaticaParser
 
 
 def main():
+    filename = "input.txt"
     #contiene el texto a analizar
-    input_stream = InputStream("3+4*5")
+    # input_stream = InputStream("3+4*5")
+    input_stream = FileStream(filename, encoding="utf-8")
 
     #instancia del lexer
     lexer= GramaticaLexer(input_stream)
@@ -24,7 +26,7 @@ def main():
 
     #llama a la regla inicial de la gramatica, expr, para que el parser comience a analizar
     #construye un arbol de analisis sintactico
-    tree= parser.expr()
+    tree= parser.prog()
     print(tree.toStringTree(recog=parser))
 
 main()
